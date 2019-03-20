@@ -31,7 +31,7 @@ Figwheel will be your best friend while developing your Quil sketch. Whenever yo
 1. Open `src/quil_cljs_calva_template/core.cljs` of this project in VS Code.
 2. Run the **Calva: Connect** command, `ctrl+alt+v c`.
 
-See the bottom of that `core.cljs` file for some starting tips on REPL powered, interactive development with Calva.
+See [the bottom of that core.cljs](https://github.com/PEZ/quil-cljs-calva-template/blob/master/src/quil_cljs_calva_template/core.cljs#L50) file for some starting tips on REPL powered, interactive development with Calva.
 
 
 ## Happy ClojureScript Coding!
