@@ -1,5 +1,5 @@
 (defproject quil-cljs-calva-template "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
+  :description "A template project for using Calva for quil-cljs"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
@@ -9,6 +9,18 @@
 
   :plugins [[lein-cljsbuild "1.1.7"]
             [lein-figwheel "0.5.15"]]
+
+  :repl-options {:nrepl-middleware [cider.piggieback/wrap-cljs-repl]
+                 :skip-default-init false
+                 :init-ns quil-cljs-calva-template.user}
+
+  :profiles {:dev
+             {:source-paths ["dev"]}
+             :repl {:plugins [[cider/cider-nrepl "0.21.2-SNAPSHOT"]]
+                    :dependencies [[nrepl "0.6.0"]
+                                   [cider/piggieback "0.4.0"]
+                                   [figwheel-sidecar "0.5.18"]]}}
+
   :hooks [leiningen.cljsbuild]
 
   :clean-targets ^{:protect false} ["resources/public/js"]
