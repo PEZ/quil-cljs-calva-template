@@ -47,5 +47,33 @@
     ; fun-mode.
     :middleware [m/fun-mode]))
 
-; uncomment this line to reset the sketch:
-; (run-sketch)
+;; To reset the sketch: evaluate the `(run-sketch)` form below.
+(comment
+  (run-sketch))
+;; Easiest way to do it in Calva is to place the cursor anywhere
+;; in the form and run the **Evaluate top level form** command,
+;; Keyboard shortcut for this is: `ctrl+alt+v space`
+;; (Hold down ctrl and alt while pressing v, release the buttons and press space)
+
+;; Evaluate top level form will regard anything directly in a `(comment)` as
+;; top level. Try evaluating each of the below top level forms by moving the
+;; cursor inside them and issue `ctrl+alt+v space`.
+;; Use `ctrl+alt+v alt+space` to instead evaluate the forms in the REPL window.
+
+(comment
+  (Math/sin (/ Math/PI 6))
+  (/ (* 1000 (Math/sin (/ Math/PI 6))) 1000)
+  (/ (Math/round (* 1000 (Math/sin (/ Math/PI 6)))) 1000)
+  (range 0 (* 2 Math/PI) (/ Math/PI 12))
+  (map #(/ (Math/round (* 1000 (Math/sin %))) 1000) (range 0 (* 2 Math/PI) (/ Math/PI 12)))
+  (map #(/ (Math/round (* 1000 (Math/cos %))) 1000) (range 0 (* 2 Math/PI) (/ Math/PI 12))))
+
+;; To evaluate a form a particular form, place the cursour immediately before
+;; or after it. For instance try placing the cursor right behind the closing paren
+;; of `(* 2 Math/PI)` above and see what happens. Place the cursor between the I
+;; in PI and the closing paren and see what happens.
+
+;; To see what Calva commands are available, bring up the command palette with
+;; `cmd+shift+p` on Mac, `ctrl+shift+p` on Windows, and type `Calva`.
+
+;; Happy ClojureScript coding! ❤️
