@@ -20,7 +20,7 @@ Like so:
 ### Start the app:
 
 1. From the project directory, run `lein repl` in a terminal window and wait for the REPL prompt.
-1. Run `(start-figwheel)` and wait for the message `Successfully compiled "resources/public/js/main.js"`.
+1. Run `(figwheel-start)` and wait for the message `Successfully compiled "resources/public/js/main.js"`.
 1. Open [localhost:3449](http://localhost:3449) in your browser and look at the circles moving around.
 
 Figwheel will be your best friend while developing your Quil sketch. Whenever you save your source files the browser will automatically refresh everything, providing you with quick feedback. For more information about Figwheel, check the [Figwheel repository on GitHub](https://github.com/bhauman/lein-figwheel).
