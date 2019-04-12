@@ -10,16 +10,15 @@
   :plugins [[lein-cljsbuild "1.1.7"]
             [lein-figwheel "0.5.15"]]
 
-  :repl-options {:nrepl-middleware [cider.piggieback/wrap-cljs-repl]
-                 :skip-default-init false
-                 :init-ns quil-cljs-calva-template.user}
-
   :profiles {:dev
              {:source-paths ["dev"]}
              :repl {:plugins [[cider/cider-nrepl "0.21.2-SNAPSHOT"]]
                     :dependencies [[nrepl "0.6.0"]
                                    [cider/piggieback "0.4.0"]
-                                   [figwheel-sidecar "0.5.18"]]}}
+                                   [figwheel-sidecar "0.5.19-SNAPSHOT"]]
+                    :repl-options {:nrepl-middleware [cider.piggieback/wrap-cljs-repl]
+                                   :skip-default-init false
+                                   :init-ns quil-cljs-calva-template.user}}}
 
   :hooks [leiningen.cljsbuild]
 
@@ -42,4 +41,5 @@
               :output-to "resources/public/js/main.js"
               :output-dir "resources/public/js/optimized"
               :asset-path "js/optimized"
-              :optimizations :advanced}}]})
+              :optimizations :advanced}}]}
+  :figwheel {:server-port 3450})

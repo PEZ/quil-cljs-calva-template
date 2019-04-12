@@ -1,9 +1,9 @@
 (ns quil-cljs-calva-template.user
-  (:use [figwheel-sidecar.repl-api :as ra]))
+  (:use [figwheel-sidecar.repl-api :as sidercar]))
 
 (defn figwheel-start []
-  (ra/start-figwheel!)
-  (ra/cljs-repl "dev"))
+  (sidercar/start-figwheel!)
+  (sidercar/cljs-repl "dev"))
 
 (defn figwheel-stop []
-  (ra/stop-figwheel!))
+  (sidercar/stop-figwheel!))
