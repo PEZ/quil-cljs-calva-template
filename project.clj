@@ -23,6 +23,7 @@
   :hooks [leiningen.cljsbuild]
 
   :clean-targets ^{:protect false} ["resources/public/js"]
+
   :cljsbuild
   {:builds [; development build with figwheel hot swap
             {:id "development"
