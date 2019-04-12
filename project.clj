@@ -42,4 +42,4 @@
               :output-dir "resources/public/js/optimized"
               :asset-path "js/optimized"
               :optimizations :advanced}}]}
-  :figwheel {:server-port 3450})
+  :figwheel {:server-port 3449})
