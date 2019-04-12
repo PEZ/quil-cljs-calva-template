@@ -12,10 +12,10 @@
 
   :profiles {:dev
              {:source-paths ["dev"]}
-             :repl {:plugins [[cider/cider-nrepl "0.21.2-SNAPSHOT"]]
+             :repl {:plugins [[cider/cider-nrepl "0.21.1"]]
                     :dependencies [[nrepl "0.6.0"]
                                    [cider/piggieback "0.4.0"]
-                                   [figwheel-sidecar "0.5.19-SNAPSHOT"]]
+                                   [figwheel-sidecar "0.5.18"]]
                     :repl-options {:nrepl-middleware [cider.piggieback/wrap-cljs-repl]
                                    :skip-default-init false
                                    :init-ns quil-cljs-calva-template.user}}}
